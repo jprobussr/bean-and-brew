@@ -17,6 +17,10 @@
   text-decoration: none;
 }
 
+.navbar__brand:hover {
+  color: var(--color-accent);
+}
+
 .navbar__links {
   display: flex;
   gap: 1rem;
@@ -41,11 +45,34 @@
   border-radius: 2px;
 }
 
+.navbar__toggle {
+    display: none;
+}
+
 @media (max-width: 600px) {
   .navbar {
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
+    flex-wrap: wrap;
     padding: 1rem;
+  }
+
+  .navbar__toggle {
+    display: block;
+    background: none;
+    border: none;
+    color: var(--color-primary);
+    font-size: 1.75rem;
+    cursor: pointer;
+  }
+
+  .navbar__links {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .navbar__links--open {
+    display: flex;
+    margin-top: 1rem;
   }
 }
