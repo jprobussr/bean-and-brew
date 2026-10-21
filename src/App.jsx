@@ -1,11 +1,13 @@
 import './App.css';
+import Navbar from './components/Navbar.jsx';
 
 const App = () => {
   return (
-    <main>
-      <h1>Brew and Bean</h1>
-    </main>
-  )
-}
+    <>
+      <Navbar />
+      <main></main>
+    </>
+  );
+};
 
-export default App
+export default App;
