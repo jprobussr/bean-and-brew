@@ -1,5 +1,6 @@
 import './App.css';
 import Hero from './components/Hero.jsx';
+import Menu from './components/Menu.jsx';
 import Navbar from './components/Navbar.jsx';
 
 const App = () => {
@@ -8,6 +9,7 @@ const App = () => {
       <Navbar />
       <main>
         <Hero />
+        <Menu />
       </main>
     </>
   );

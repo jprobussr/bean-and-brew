@@ -1,0 +1,25 @@
+.menu-item {
+  background-color: var(--color-white);
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.menu-item__name {
+  font-size: 1.25rem;
+  color: var(--color-primary);
+  margin-bottom: 0.5rem;
+}
+
+.menu-item__description {
+  font-size: 0.95rem;
+  color: var(--color-text);
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.menu-item__price {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: var(--color-accent);
+}

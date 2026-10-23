@@ -1,0 +1,33 @@
+.menu {
+  padding: 4rem 2rem;
+  background-color: var(--color-background);
+}
+
+.menu__title {
+  text-align: center;
+  font-size: 2rem;
+  color: var(--color-primary);
+  margin-bottom: 2rem;
+}
+
+.menu__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+@media (max-width: 600px) {
+  .menu {
+    padding: 3rem 1.5rem;
+  }
+
+  .menu__title {
+    font-size: 1.75rem;
+  }
+
+  .menu__grid {
+    grid-template-columns: 1fr;
+  }
+}
