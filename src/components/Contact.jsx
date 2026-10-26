@@ -2,32 +2,42 @@ import { useState } from 'react';
 import './Contact.css';
 
 const Contact = () => {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [message, setMessage] = useState('');
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: '',
+  });
+
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   const handleNameChange = (e) => {
-    setName(e.target.value);
+    setFormData({
+      ...formData,
+      name: e.target.value,
+    });
     setIsSubmitted(false);
   };
 
   const handleEmailChange = (e) => {
-    setEmail(e.target.value);
+    setFormData({
+      ...formData,
+      email: e.target.value,
+    });
     setIsSubmitted(false);
   };
 
   const handleMessageChange = (e) => {
-    setMessage(e.target.value);
+    setFormData({
+      ...formData,
+      message: e.target.value,
+    });
     setIsSubmitted(false);
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(name, email, message);
-    setName('');
-    setEmail('');
-    setMessage('');
+    console.log(formData.name, formData.email, formData.message);
+    setFormData({ name: '', email: '', message: '' });
 
     setIsSubmitted(true);
   };
@@ -48,7 +58,7 @@ const Contact = () => {
           id="name"
           name="name"
           type="text"
-          value={name}
+          value={formData.name}
           onChange={handleNameChange}
           required
         />
@@ -60,7 +70,7 @@ const Contact = () => {
           type="email"
           id="email"
           name="email"
-          value={email}
+          value={formData.email}
           onChange={handleEmailChange}
           required
         />
@@ -71,7 +81,7 @@ const Contact = () => {
           className="contact__textarea"
           name="message"
           id="message"
-          value={message}
+          value={formData.message}
           onChange={handleMessageChange}
           required
         />
