@@ -10,26 +10,10 @@ const Contact = () => {
 
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const handleNameChange = (e) => {
+  const handleChange = (e) => {
     setFormData({
       ...formData,
-      name: e.target.value,
-    });
-    setIsSubmitted(false);
-  };
-
-  const handleEmailChange = (e) => {
-    setFormData({
-      ...formData,
-      email: e.target.value,
-    });
-    setIsSubmitted(false);
-  };
-
-  const handleMessageChange = (e) => {
-    setFormData({
-      ...formData,
-      message: e.target.value,
+      [e.target.name]: e.target.value,
     });
     setIsSubmitted(false);
   };
@@ -59,7 +43,7 @@ const Contact = () => {
           name="name"
           type="text"
           value={formData.name}
-          onChange={handleNameChange}
+          onChange={handleChange}
           required
         />
         <label className="contact__label" htmlFor="email">
@@ -71,7 +55,7 @@ const Contact = () => {
           id="email"
           name="email"
           value={formData.email}
-          onChange={handleEmailChange}
+          onChange={handleChange}
           required
         />
         <label className="contact__label" htmlFor="message">
@@ -82,7 +66,7 @@ const Contact = () => {
           name="message"
           id="message"
           value={formData.message}
-          onChange={handleMessageChange}
+          onChange={handleChange}
           required
         />
         <button className="contact__button" type="submit">
