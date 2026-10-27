@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import './Contact.css';
+import FormInput from './FormInput.jsx';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -34,30 +35,22 @@ const Contact = () => {
         love to hear from you! Send us a message, and we'll be happy to help.
       </p>
       <form onSubmit={handleSubmit} className="contact__form">
-        <label className="contact__label" htmlFor="name">
-          Name:
-        </label>
-        <input
-          className="contact__input"
-          id="name"
+        <FormInput
+          label="Name:"
           name="name"
           type="text"
           value={formData.name}
           onChange={handleChange}
-          required
         />
-        <label className="contact__label" htmlFor="email">
-          Email:
-        </label>
-        <input
-          className="contact__input"
-          type="email"
-          id="email"
+
+        <FormInput
+          label="Email:"
           name="email"
+          type="email"
           value={formData.email}
           onChange={handleChange}
-          required
         />
+
         <label className="contact__label" htmlFor="message">
           Message:
         </label>
