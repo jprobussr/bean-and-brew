@@ -1,6 +1,7 @@
 import './App.css';
 import About from './components/About.jsx';
 import Contact from './components/Contact.jsx';
+import Footer from './components/Footer.jsx';
 import Hero from './components/Hero.jsx';
 import Menu from './components/Menu.jsx';
 import Navbar from './components/Navbar.jsx';
@@ -12,9 +13,10 @@ const App = () => {
       <main>
         <Hero />
         <Menu />
-        <Contact />
         <About />
+        <Contact />
       </main>
+      <Footer />
     </>
   );
 };
