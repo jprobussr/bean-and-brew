@@ -1,20 +1,25 @@
 .about {
   padding: 6rem 2rem;
-  max-width: 110rem;
-  margin: 0 auto;
   text-align: center;
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url('/images/about-coffee.jpg');
+  background-size: cover;
+  background-position: center;
 }
 
 .about__title {
   font-size: 3.2rem;
   font-weight: 700;
   margin-bottom: 2rem;
-  color: #78350f;
+  color: #f9f4ee;
 }
 
 .about__text {
-    font-size: 1.8rem;
-    line-height: 1.7;
-    margin-bottom: 2rem;
-    color: #374151;
+  font-size: 1.8rem;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+  color: #f3e8dc;
+  max-width: 70rem;
+  margin-inline: auto;
 }
