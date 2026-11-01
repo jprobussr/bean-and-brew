@@ -4,7 +4,8 @@ import './Navbar.css';
 const navLinks = [
   { id: 1, name: 'Home', href: '#home' },
   { id: 2, name: 'Menu', href: '#menu' },
-  { id: 3, name: 'Contact', href: '#contact' },
+  { id: 3, name: 'About', href: '#about' },
+  { id: 4, name: 'Contact', href: '#contact' },
 ];
 
 const Navbar = () => {

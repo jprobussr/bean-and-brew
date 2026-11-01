@@ -68,7 +68,7 @@ const Contact = () => {
       </form>
 
       {isSubmitted && (
-        <p className="contact__success">
+        <p className="contact__success" role='status'>
           Form submitted successfully! (Demo only — no message was sent.)
         </p>
       )}
